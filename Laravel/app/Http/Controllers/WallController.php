@@ -9,8 +9,8 @@ class WallController extends Controller
 {
     public function show($search = "")
     {
-    	$posts = Post::all();
-
+    	$posts = Post::whereRaw('content like ?', ['%'.$search.'%'])->get();
+    	
     	return view('show', ['search' => $search, "posts" => $posts]);
     }
 
