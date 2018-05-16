@@ -35,6 +35,6 @@ class Post extends Eloquent
 
 	public function user()
 	{
-		return $this->belongsTo(\App\Models\User::class, 'author');
+		return $this->belongsTo(\App\User::class, 'author');
 	}
 }

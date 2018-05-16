@@ -17,4 +17,10 @@ Wall @endsection
     	{!! Form::submit('Write on the wall') !!}
     {!! Form::close() !!}
 </div>
+<br><br>
+<ul>
+@foreach($posts as $post)
+<li><b>{{ $post->user->name }}</b> says : <i>{{ $post->content }}</i></li>
+@endforeach
+</ul>
 @endsection
