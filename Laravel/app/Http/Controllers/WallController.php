@@ -23,6 +23,8 @@ class WallController extends Controller
 
     	$post->save();
 
+    	\Session::flash('flash_message','Commentaire ajouté au wall !'); //<--FLASH MESSAGE
+
     	return redirect('wall');
     }
 }
